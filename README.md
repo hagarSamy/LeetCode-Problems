@@ -1,1 +1,1 @@
-Trying out problem solving - practicing on LEETCODE [text](https://leetcode.com/)
+Trying out problem solving - practicing on [LEETCODE](https://leetcode.com/)
