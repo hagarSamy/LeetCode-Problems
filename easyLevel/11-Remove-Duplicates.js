@@ -25,7 +25,7 @@ var removeDuplicates = function(nums) {
             nums.splice(i, 1);
             i--;
         }
-        mapper.set(nums[i], i);
+        else {mapper.set(nums[i], i)};
     }
     let k = nums.length;
     return k;
