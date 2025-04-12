@@ -18,20 +18,22 @@
  * @return {Array}
  */
 var sortBy = function(arr, fn) {
-    let map = new Map();
-    let newArr = [];
-    const sortedArr = [];
-    let min = 0;
-    let idx = 0;
-    for (let x of arr) {
-        map.set(fn(x), arr.indexOf(x));
-        newArr.push(fn(x));
-    };
-    while(newArr.length > 0) {
-        min = Math.min(...newArr);
-        idx = newArr.indexOf(min);
-        sortedArr.push(arr[map.get(min)]);
-        newArr.splice(idx, 1);  
-    }
-    return sortedArr;
+    // let map = new Map();
+    // let newArr = [];
+    // const sortedArr = [];
+    // let min = 0;
+    // let idx = 0;
+    // for (let x of arr) {
+    //     map.set(fn(x), arr.indexOf(x));
+    //     newArr.push(fn(x));
+    // };
+    // while(newArr.length > 0) {
+    //     min = Math.min(...newArr);
+    //     idx = newArr.indexOf(min);
+    //     sortedArr.push(arr[map.get(min)]);
+    //     newArr.splice(idx, 1);  
+    // }
+    // return sortedArr;
+    // MORE EFFICIENT NOW😒
+    return arr.sort((a, b) => fn(a) - fn(b));
 };
